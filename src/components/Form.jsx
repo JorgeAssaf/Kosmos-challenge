@@ -40,8 +40,7 @@ const Form = ({ users, setUsers }) => {
   }
 
   return (
-    <div className='md:w-1/2 lg:w-3/5 mx-5 mb-10' >
-
+    <div className='md:w-1/2 lg:w-3/5 mx-5 mb-10'>
       <h2 className='font-black text-3xl text-center mb-7'>Registro</h2>
       {error && (
         <div className='bg-red-700 text-white uppercase text-center p-3 rounded-md mb-5 font-bold'>
@@ -49,7 +48,12 @@ const Form = ({ users, setUsers }) => {
         </div>
       )}
       <form className=' shadow-md rounded-lg py-10 px-5' onSubmit={onSubmit}>
-        <label className='block text-gray-700 uppercase font-bold' htmlFor='nombre'>Ingrese su nombre</label>
+        <label
+          className='block text-gray-700 uppercase font-bold'
+          htmlFor='nombre'
+        >
+          Ingrese su nombre
+        </label>
         <input
           className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-4'
           type='text'
@@ -58,7 +62,12 @@ const Form = ({ users, setUsers }) => {
           onChange={(e) => setNombre(e.target.value)}
           value={nombre}
         />
-        <label className='block text-gray-700 uppercase font-bold' htmlFor='trabajos'>¿Cual es tu rol?</label>
+        <label
+          className='block text-gray-700 uppercase font-bold'
+          htmlFor='trabajos'
+        >
+          ¿Cual es tu rol?
+        </label>
 
         <select
           className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-4'
@@ -72,11 +81,11 @@ const Form = ({ users, setUsers }) => {
           <option value='Diseñador'>Diseñador</option>
           <option value='Marketing'>Marketing</option>
         </select>
-        <p className='block text-gray-700 uppercase font-bold mb-2'>¿Cual es tu estado civil?</p>
+        <p className='block text-gray-700 uppercase font-bold mb-2'>
+          ¿Cual es tu estado civil?
+        </p>
         <section className='flex  items-center gap-5'>
-
           <input
-
             type='checkbox'
             name='Soltero'
             id='Soltero'
@@ -98,7 +107,9 @@ const Form = ({ users, setUsers }) => {
           />
           Casado
         </section>
-        <button className='px-3 py-2 bg-indigo-600 mt-5 w-full text-lg text-white font-bold rounded-md'>Enviar</button>
+        <button className='px-3 py-2 bg-indigo-600 mt-5 w-full text-lg text-white font-bold rounded-md'>
+          Enviar
+        </button>
       </form>
     </div>
   )
